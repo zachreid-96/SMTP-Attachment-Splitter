@@ -6,12 +6,12 @@ To implement this code into a Gmail SMTP server, or SMTP account:
   1) In Gmail > Settings > All Settings > Labels and Add 'Error', 'SMTP_mult', 'SMTP_single' (no need for filters)
   2) In Google Scrips > Create New Project > copy and paste 'Split_SMTP_Attachments.js' contents to project
   3) In Google Scripts Project > Triggers > Add Trigger >
-     Function to use: myFunction
-     Deployment: Head
-     Event Source: Time-driven
-     Time based trigger: Minutes timmer
-     Minute Interval: Every Minute
-     > Save
+     - Function to use: myFunction
+     - Deployment: Head
+     - Event Source: Time-driven
+     - Time based trigger: Minutes timmer
+     - Minute Interval: Every Minute
+  4) Save Trigger
 
 This script will then run every minute looking for new sent emails and will assign each email 'thread' a label so it is excluded in each subsequent search.
 This script does log events, so if something is not acting the way it should there is a good chance it'll be logged.
